@@ -1,0 +1,3 @@
+function compraLanche(){
+    alert('Função comprar lanche foi chamada')
+}
