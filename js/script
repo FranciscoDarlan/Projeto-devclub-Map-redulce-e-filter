@@ -1,12 +1,11 @@
-function compraLanche(){
-    alert('Função comprar lanche foi chamada')
-}
 
+const buttonForEach = document.querySelector('.show-all');
 const lista = document.querySelector('.cardapio-individual');
-
 let myLista = '';
 
-//forEach
+
+function mostrarTudo(){
+   //forEach
 menuOptions.forEach( (product) => {
     myLista = myLista + `
     <div class="div-img-comida">
@@ -23,3 +22,7 @@ menuOptions.forEach( (product) => {
                 </div> 
                 `
 })
+lista.innerHTML = myLista;
+}
+
+buttonForEach.addEventListener('click', mostrarTudo);
