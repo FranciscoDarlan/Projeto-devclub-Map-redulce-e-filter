@@ -12,8 +12,24 @@ com display grid consigo configurar para
 ficar na tela a quantidade de coluna que eu quiser
  
 */
+
+
+
 body {
     background-color: #000000;
+}
+
+.div-projeto-todo{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header{
+    background-color: red;
+    color: #fff;
 }
 
 .div-buttons{
