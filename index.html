@@ -2,64 +2,65 @@
 <html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Store Lanches</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Store Lanches</title>
 </head>
 
 <body>
 
-    <div class="div-projeto-todo">
-        <header>
-            <h1>
-                Bem vindo a Páginas de Lanches
-            </h1>
-        </header>
+  <div class="div-projeto-todo">
+    <header>
+      <h1>
+        Bem vindo a Páginas de Lanches
+      </h1>
+    </header>
 
-        <article>
-            <div class="div-buttons">
-                <button class="show-all">
-                    butão 1 mostrar tudo forEach
-                </button>
-                <button class="show-Descount">
-                    butão 2 Map Mapear
-                </button>
-                <button>
-                    butão 3 Redulce Somar tudo
-                </button>
-                <button>
-                    butão 4 Filter Filtrar
-                </button>
-            </div>
-        </article>
+    <article>
+      <div class="div-buttons">
+        <button class="show-all">
+          butão 1 mostrar tudo forEach
+        </button>
+        <button class="show-Descount">
+          butão 2 Map Mapear
+        </button>
+        <button>
+          butão 3 Redulce Somar tudo
+        </button>
+        <button>
+          butão 4 Filter Filtrar
+        </button>
+      </div>
+    </article>
 
-        <main class="div-cardapio-complet">
-            <div class="cardapio-individual">
-                <div class="div-img-comida">
-                    <img src="./imagensProjeto/bacon-egg.png" alt="imagem-comida">
-                </div>
-                <div class="div-nome-comida">
-                    <p>X-bancon</p>
-                </div>
-                <div class="div-valor-comida">
-                    <p>R$100</p>
-                </div>
-                <div class="div-botao-comprar">
-                    <button class="buttonComprarLanche" onclick="compraLanche()">COMPRAR</button>
-                </div>     
-            </div>
+    <main class="div-cardapio-complet">
+      <div class="cardapio-individual">
+        <div class="div-img-comida">
+          <img src="./imagensProjeto/bacon-egg.png" alt="imagem-comida">
+        </div>
+        <div class="div-nome-comida">
+          <p>X-bancon</p>
+        </div>
+        <div class="div-valor-comida">
+          <p>R$100</p>
+        </div>
+        <div class="div-botao-comprar">
+          <button class="buttonComprarLanche" onclick="compraLanche()">COMPRAR</button>
+        </div>
+      </div>
 
-            
 
-        </main>
 
-    </div>
+    </main>
 
+  </div>
+
+  <script src="./js/products.js"></script> <!-- precisa vir primeiro porque ele ler primeiro e depois usa oq leu... -->
+  <script src="./js/script"></script>
 </body>
 
-<script src="./js/products.js"></script> <!-- precisa vir primeiro porque ele ler primeiro e depois usa oq leu... -->
-<script src="./js/script"></script> 
+
 
 
 </html>
