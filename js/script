@@ -1,11 +1,16 @@
-let buttonMostrarTudo = document.querySelect('.div-buttons')
-let divCardapio = document.querySelect('.cardapio-individual')
+let buttonMostrarTudo = document.querySelect('.div-buttons'); // button chamar função
+let divCardapio = document.querySelect('.cardapio-individual'); // div que mostra as informações
+
+let buttonMostraDesconto = document.querySelect('.show-Descount');
 
 function MostrarTudoForEath(){
-  menuOptions.forEach((produt) =>{
-divCardapio = divCardapio + `
+
+  let myDivCardapio = ''; // começa a variavel sem nada ..
+
+  menuOptions.forEach((produt) =>{  // function que chama o forEach
+    myDivCardapio = myDivCardapio + ` // aqui pega minha div vazia e adiciona as modificações no array ..
                 <div class="div-img-comida">
-                    <img src=${produt.src}>
+                    <img ${produt.src}>
                 </div>
                 <div class="div-nome-comida">
                     <p>${produt.nome}</p>
@@ -19,8 +24,16 @@ divCardapio = divCardapio + `
 `
 })
 
-  divCardapio.innerHTML = divCardapio
-
+  divCardapio.innerHTML = myDivCardapio
 }
 
+function mostrarDesonto(){
+  menuOptions.map(newArrayDescount){
+    
+  }
+  MostrarTudoForEath(newArrayDescount)
+}
+
+
+buttonMostraDesconto.addEventListener('click', mostrarDesonto)
 buttonMostrarTudo.addEvenListener("click", MostrarTudoForEath);
