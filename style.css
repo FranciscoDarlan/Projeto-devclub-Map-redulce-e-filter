@@ -69,18 +69,14 @@ button:active {
 
 .div-cardapio-complet {
     display: grid;
-    grid-template-columns: 300px 200px 200px;
+    grid-template-columns: 200px 200px 200px;
     gap: 10vh;
     justify-content: center;
     margin-top: 5vh;
 }
 
 .cardapio-individual{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+opacity: 0px;
 }
 
 img {
@@ -90,11 +86,6 @@ img {
 p {
     color: #fff;
     font-size: 3vh;
-}
-
-.div-valor-comida {
-    font-weight: bold;
-    color: #79cb15;
 }
 
 .buttonComprarLanche {
