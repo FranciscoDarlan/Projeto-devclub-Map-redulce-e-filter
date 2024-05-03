@@ -1,28 +1,26 @@
+let buttonMostrarTudo = document.querySelect('.div-buttons')
+let divCardapio = document.querySelect('.cardapio-individual')
 
-const buttonForEach = document.querySelector('.show-all');
-const lista = document.querySelector('.cardapio-individual');
-let myLista = '';
-
-
-function mostrarTudo(){
-   //forEach
-menuOptions.forEach( (product) => {
-    myLista = myLista + `
-    <div class="div-img-comida">
-                    <img src=${product.src} alt="imagem-comida">
+function MostrarTudoForEath(){
+  menuOptions.forEach((produt) =>{
+divCardapio = divCardapio + `
+                <div class="div-img-comida">
+                    <img src=${produt.src}>
                 </div>
                 <div class="div-nome-comida">
-                    <p>${product.name}</p>
+                    <p>${produt.nome}</p>
                 </div>
                 <div class="div-valor-comida">
-                    <p>R$${product.price}</p>
+                    <p>R$${produt.price}</p>
                 </div>
                 <div class="div-botao-comprar">
                     <button onclick="compraLanche()">COMPRAR</button>
-                </div> 
-                `
+                </div>
+`
 })
-lista.innerHTML = myLista;
+
+  divCardapio.innerHTML = divCardapio
+
 }
 
-buttonForEach.addEventListener('click', mostrarTudo);
+buttonMostrarTudo.addEvenListener("click", MostrarTudoForEath);
