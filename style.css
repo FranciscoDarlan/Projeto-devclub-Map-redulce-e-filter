@@ -100,11 +100,27 @@ p {
     border-radius: 10px;
     color: #000000;
     cursor: pointer;
-    font-size: 2vh;  
+    font-size: 2vh;
 }
+
 .buttonComprarLanche:hover{
     opacity: .8;
 }
 .buttonComprarLanche:active{
     opacity: .5;
+}
+
+@media screen and(max-width: 1000px) {
+    body {
+        background-color: #ffffff;
+    }
+
+    .div-projeto-todo {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 }
