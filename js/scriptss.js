@@ -10,6 +10,7 @@ let somaTudo = document.querySelector('.soma-tudo');
 
 
 //na minha funcção de mostrar tudo tive que acicionar parametgro de infomação para poder usar no MAP!!
+// O FOREACH SÓ FUNCIONA COM ARRAY !!!!!!!!!!!!1  
 function MostrarTudoForEath(parametroDeInfomacoes) {
   let myDivCardapio = ''; //forEach precisa começar em uma variavel vazia..
 // OBS: antes de iniciar a função ela vai esvaziar minha variavel e adicionar novamente, caso não faça isso vai acumular uma infomação deopis da outra!!!
@@ -30,7 +31,6 @@ function MostrarTudoForEath(parametroDeInfomacoes) {
   })
   divCardapio.innerHTML = myDivCardapio;
 }
-
 
 //function do MAP
 function mostrarDesconto() {
@@ -61,13 +61,21 @@ function mostrarDesconto() {
 } 
 
 
-
+//function do REDUCE
 function FunctionSomaTudo(){
-  alert('vamossssss')
+
+  //aqui vou criar uma variavel para colocar o valor reduzido com reduce!!
+  let totalValores = menuOptions.reduce((acc, atual) => acc + atual.price, 0);
+                                                            //parametro+price
+                                                            
+  //aqui é a variavel pega pelo com querySelector + innnerHTML
+    divCardapio.innerHTML = `
+
+          <div class="cardapio-individual-soma">
+            <p>A Soma dos Valores é R$ ${totalValores}</p>
+          </div>
+    `
 }
-
-
-
 
 
 //1° metodo forEach
@@ -76,7 +84,7 @@ function FunctionSomaTudo(){
 buttonMostrarTudo.addEventListener('click', () => MostrarTudoForEath(menuOptions));
 
 //2° metodo MAP
-buttonMostraDesconto.addEventListener('click', mostrarDesconto)
+buttonMostraDesconto.addEventListener('click', mostrarDesconto);
 
 //3° metodo REDULCE 
-somaTudo.addEventListener('click', FunctionSomaTudo)
+somaTudo.addEventListener('click', FunctionSomaTudo);
