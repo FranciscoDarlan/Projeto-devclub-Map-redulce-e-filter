@@ -8,6 +8,9 @@ let buttonMostraDesconto = document.querySelector('.show-Descount');
 //3° variaveis para Redulce
 let somaTudo = document.querySelector('.soma-tudo');
 
+//4° variaveis para filter
+let buttonFilter = document.querySelector('.filtrar');
+
 
 //na minha funcção de mostrar tudo tive que acicionar parametgro de infomação para poder usar no MAP!!
 // O FOREACH SÓ FUNCIONA COM ARRAY !!!!!!!!!!!!1  
@@ -78,6 +81,12 @@ function FunctionSomaTudo(){
 }
 
 
+//function do FILTER
+function filter() {
+  const newFiltro = menuOptions.filter((parametro) => parametro.vegan)
+  MostrarTudoForEath(newFiltro);
+}
+
 //1° metodo forEach
 //agora tenho que enviar os dado aqui para chegar os parametros la na minha funcção.. 
 // a observação é que tenho que colocar um aerofunction antes da funcção para não iniciar direto!!!
@@ -88,3 +97,6 @@ buttonMostraDesconto.addEventListener('click', mostrarDesconto);
 
 //3° metodo REDULCE 
 somaTudo.addEventListener('click', FunctionSomaTudo);
+
+//4° metodo FILTER 
+buttonFilter.addEventListener('click', filter);
